@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: user-center
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Root
+    url: jdbc:mysql://112.124.54.146:3306/yupi
+    # session失效时间
+    session:
+      timeout: 86400
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 5MB
+      max-file-size: 5MB
+      location: /data/upload_tmp

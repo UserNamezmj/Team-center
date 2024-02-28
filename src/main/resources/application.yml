@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: user-center
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Root
+    url: jdbc:mysql://localhost:3306/yupi
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  redis:
+    host: localhost
+    database: 3
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+
+  session:
+    store-type: redis
+  servlet:
+    multipart:
+      max-request-size: 5MB
+      max-file-size: 5MB
+      location: /data/upload_tmp
+server:
+  port: 8080
+  reactive:
+    # session失效时间
+    session:
+      timeout: 86400
+  servlet:
+    context-path: /api
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      #主键类型
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 0 # 逻辑已删除值(默认为 0)
+      logic-not-delete-value: 1 # 逻辑未删除值(默认为 1)
+      id-type: assign_id
+    worker-id: ${random.int(1,31)}
+    datacenter-id: ${random.int(1,31)}
+
+sky:
+  minio:
+    endpoint: http://127.0.0.1:9000
+    accesskey: minioadmin
+    secretKey: 123456
+  alioss:
+    bucket-name: hellofile1
+    access-key-secret: k9kHPnQkYyg0sZN6U5yk9znRPaUTZs
+    endpoint: oss-cn-hangzhou.aliyuncs.com
+    access-key-id: LTAI5tQEgpspUo7EGfD29rVr
+
+
