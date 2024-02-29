@@ -5,7 +5,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: Root
-    url: jdbc:mysql://112.124.54.146:3306/yupi
+    url: jdbc:mysql://**********:3306/yupi
     # session失效时间
     session:
       timeout: 86400
