@@ -54,8 +54,8 @@ sky:
     secretKey: 123456
   alioss:
     bucket-name: hellofile1
-    access-key-secret: k9kHPnQkYyg0sZN6U5yk9znRPaUTZs
+    access-key-secret: **********************
     endpoint: oss-cn-hangzhou.aliyuncs.com
-    access-key-id: LTAI5tQEgpspUo7EGfD29rVr
+    access-key-id: ********************
 
 
